@@ -1,0 +1,114 @@
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('/assets/Montserrat/Montserrat-Bold.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Montserrat-ExtraBoldItalic';
+  src: url('/assets/Montserrat/Montserrat-ExtraBoldItalic.ttf') format('truetype');
+}
+
+$primary-color: #fff;
+$secondary-color: #160C6E;
+$font-size: 14px;
+$cursor: pointer;
+$shadow: 0px 15px 45px rgba(0, 0, 0, 0.3);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Montserrat-Bold',sans-serif;
+}
+
+.jumbotron{
+  background: $secondary-color url('/assets/img.svg') center no-repeat;
+  min-height: 100vh;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li{
+      list-style: none;
+      text-align: center;
+      cursor: $cursor;
+    }
+    li:nth-child(2){
+      box-shadow: $shadow;
+    }
+    li p{
+      font-family: 'Montserrat-ExtraBoldItalic',sans-serif;
+      font-size: $font-size + 2px;
+      text-transform: uppercase;
+      color: $primary-color;
+      margin-top: -10px;
+    }
+  }
+  .text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .menu{
+      font-size: $font-size + 4px;
+    }
+    .menu h2{
+      color: $primary-color;
+      margin-bottom: 20px;
+    }
+    .menu ul li{
+      list-style-type: none;
+      margin-bottom: 20px;
+    }
+    .menu ul li a{
+      text-decoration: none;
+      color: rgba(255,255,255,.5);
+      transition: all .3s;
+    }
+    .menu ul li a:hover{
+      color: $primary-color;
+    }
+
+    .title{
+      text-align: right;
+      color: $primary-color;
+    }
+    .title h1{
+      font-size: $font-size + 106px;
+      text-transform: uppercase;
+    }
+    .title p{
+      margin: 10px 0 30px;
+      font-size: $font-size + 4px;
+      line-height: 1.5;
+    }
+    .title .btn{
+      font-family: 'Montserrat-bold',sans-serif;
+      border: none;
+      outline: none;
+      background: linear-gradient(321.25deg, #DF387C -33.39%, #FF602C 103.69%);
+      box-shadow: 0px 15px 45px rgba(0, 0, 0, 0.3);
+      border-radius: 100px;
+      padding: 20px 30px;
+      color: $primary-color;
+      cursor: $cursor;
+    }
+    .title .btn i{
+      margin-left: 5px;
+    }
+  }
+  .icon img{
+    cursor: $cursor;
+  }
+  .icon .fb{
+    margin-left: 15px;
+    box-shadow: $shadow;
+  }
+}
+
